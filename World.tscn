@@ -1,3 +1,17 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/background.png" type="Texture" id=2]
 
 [node name="World" type="Node2D"]
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( -1, 0 )
+scale = Vector2( 1.00185, 1.00104 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 540, 960 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 254, 860 )
